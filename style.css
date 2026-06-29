@@ -36,6 +36,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -44,6 +45,8 @@ body {
     background-color: var(--bg-light);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 a {
@@ -139,13 +142,14 @@ h3 { font-size: 1.5rem; font-weight: 600; }
    Layout Containers
    ========================================================================== */
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
 section {
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 /* ==========================================================================
@@ -277,8 +281,13 @@ header {
 .about-image {
     position: relative;
     border-radius: 1rem;
-    overflow: hidden;
     box-shadow: var(--shadow-lg);
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
 }
 
 .experience-badge {
@@ -319,7 +328,7 @@ header {
    ========================================================================== */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 2rem;
 }
 
@@ -385,7 +394,7 @@ header {
    ========================================================================== */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     gap: 2rem;
 }
 
@@ -501,7 +510,7 @@ textarea.form-control {
    ========================================================================== */
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 2rem;
 }
 
@@ -658,6 +667,7 @@ footer {
 
     .hamburger {
         display: flex;
+        padding: 0.5rem;
     }
 
     .nav-links {
@@ -670,6 +680,7 @@ footer {
         gap: 0;
         box-shadow: var(--shadow-md);
         display: none;
+        z-index: 999;
     }
 
     .nav-links.active {
@@ -682,15 +693,23 @@ footer {
         display: block;
     }
 
-    h1 { font-size: 2rem; }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
     
     .hero {
-        padding: 4rem 0;
+        padding: 3rem 0;
         text-align: center;
     }
 
     .hero-btns {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .hero-btns .btn {
+        width: 100%;
+        max-width: 320px;
     }
     
     .footer-grid {
