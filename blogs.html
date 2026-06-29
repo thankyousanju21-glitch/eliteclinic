@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Blog | Elite Multi Speciality Clinic</title>
+    <meta name="description" content="Read our latest health articles, wellness tips, and medical news from the experts at Elite Multi Speciality Clinic.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+        
+        .blog-sidebar {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-sm);
+            height: fit-content;
+        }
+        
+        .search-box {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            font-family: inherit;
+        }
+        
+        .search-box i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+        
+        .category-list li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .category-list a {
+            color: var(--text-dark);
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .category-list a:hover {
+            color: var(--secondary-blue);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        @media (max-width: 992px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar & Navbar (Same as index) -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-info">
+                <span><i class="fa-solid fa-clock"></i> <span data-config="timings"></span></span>
+                <span><i class="fa-solid fa-phone"></i> <a href="#" class="phone-link" data-config="phone"></a></span>
+                <span><i class="fa-solid fa-location-dot"></i> Hadosiddhapura, Carmelaram</span>
+            </div>
+            <div class="top-bar-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-user-doctor"></i>
+                <span data-config="clinicName"></span>
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="offers.html">Offers</a>
+                <a href="blogs.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Health Articles & News</h1>
+            <p>Empowering you with knowledge for a healthier life.</p>
+        </div>
+    </section>
+
+    <!-- Blog Layout -->
+    <section class="bg-light">
+        <div class="container blog-layout">
+            
+            <!-- Blog Main Area -->
+            <div>
+                <div class="blog-grid" id="blogContainer">
+                    
+                    <!-- Blog Card 1 -->
+                    <div class="blog-card" data-category="General Medicine">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5e4663e8a?auto=format&fit=crop&q=80&w=600" alt="Viral Fever" loading="lazy">
+                        <div class="blog-content">
+                            <span style="color: var(--secondary-blue); font-size: 0.875rem; font-weight: 600;">General Medicine</span>
+                            <h3 style="margin: 0.5rem 0;">Managing Viral Fevers in Monsoon</h3>
+                            <p style="color: var(--text-light); margin-bottom: 1.5rem;">Learn how to identify symptoms early and take preventive measures against common monsoon diseases like Dengue and Malaria.</p>
+                            <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 2 -->
+                    <div class="blog-card" data-category="Child Health">
+                        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=600" alt="Child Health" loading="lazy">
+                        <div class="blog-content">
+                            <span style="color: var(--secondary-blue); font-size: 0.875rem; font-weight: 600;">Child Health</span>
+                            <h3 style="margin: 0.5rem 0;">Importance of Timely Vaccinations</h3>
+                            <p style="color: var(--text-light); margin-bottom: 1.5rem;">A comprehensive guide for new parents on standard vaccination schedules and why they are critical for child immunity.</p>
+                            <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 3 -->
+                    <div class="blog-card" data-category="Nutrition">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600" alt="Healthy Diet" loading="lazy">
+                        <div class="blog-content">
+                            <span style="color: var(--secondary-blue); font-size: 0.875rem; font-weight: 600;">Nutrition</span>
+                            <h3 style="margin: 0.5rem 0;">Eating Right for Corporate Professionals</h3>
+                            <p style="color: var(--text-light); margin-bottom: 1.5rem;">Sedentary lifestyles require a specific dietary approach. Discover quick, healthy meal plans for busy schedules.</p>
+                            <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Card 4 -->
+                    <div class="blog-card" data-category="Preventive Care">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600" alt="Health Checkup" loading="lazy">
+                        <div class="blog-content">
+                            <span style="color: var(--secondary-blue); font-size: 0.875rem; font-weight: 600;">Preventive Care</span>
+                            <h3 style="margin: 0.5rem 0;">Why Annual Checkups Matter</h3>
+                            <p style="color: var(--text-light); margin-bottom: 1.5rem;">Early detection is the key to longevity. Understand what parameters are checked during an annual executive health screening.</p>
+                            <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="blog-sidebar">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="blogSearch" placeholder="Search articles..." onkeyup="filterBlogs()">
+                </div>
+                
+                <h4 style="margin-bottom: 1rem;">Categories</h4>
+                <ul class="category-list">
+                    <li><a href="#" onclick="filterCategory('All')">All Categories <span>(4)</span></a></li>
+                    <li><a href="#" onclick="filterCategory('Health Tips')">Health Tips <span>(0)</span></a></li>
+                    <li><a href="#" onclick="filterCategory('Nutrition')">Nutrition <span>(1)</span></a></li>
+                    <li><a href="#" onclick="filterCategory('Preventive Care')">Preventive Care <span>(1)</span></a></li>
+                    <li><a href="#" onclick="filterCategory('Child Health')">Child Health <span>(1)</span></a></li>
+                    <li><a href="#" onclick="filterCategory('Women\\'s Health')">Women's Health <span>(0)</span></a></li>
+                    <li><a href="#" onclick="filterCategory('General Medicine')">General Medicine <span>(1)</span></a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <span data-config="clinicName"></span>
+                    </a>
+                    <p data-config="tagline" style="margin-bottom: 1.5rem;"></p>
+                    <p><i class="fa-solid fa-location-dot" style="color: var(--accent-green); margin-right: 0.5rem;"></i> <span data-config="address"></span></p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="phone-link"><i class="fa-solid fa-phone" style="color: var(--accent-green); margin-right: 0.5rem;"></i> <span data-config="phone"></span></a></li>
+                        <li><a href="#" class="whatsapp-link"><i class="fa-brands fa-whatsapp" style="color: var(--accent-green); margin-right: 0.5rem;"></i> <span data-config="whatsappDisplay"></span></a></li>
+                        <li><a href="#" class="email-link"><i class="fa-solid fa-envelope" style="color: var(--accent-green); margin-right: 0.5rem;"></i> <span data-config="email"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> <span data-config="clinicName"></span>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="#" class="floating-whatsapp whatsapp-link" aria-label="Chat on WhatsApp" data-no-text="true">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Simple client-side search filtering
+        function filterBlogs() {
+            let input = document.getElementById('blogSearch').value.toLowerCase();
+            let cards = document.querySelectorAll('.blog-card');
+            
+            cards.forEach(card => {
+                let title = card.querySelector('h3').innerText.toLowerCase();
+                let excerpt = card.querySelector('p').innerText.toLowerCase();
+                
+                if (title.includes(input) || excerpt.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        // Category Filtering
+        function filterCategory(category) {
+            event.preventDefault();
+            let cards = document.querySelectorAll('.blog-card');
+            
+            cards.forEach(card => {
+                if (category === 'All' || card.getAttribute('data-category') === category) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

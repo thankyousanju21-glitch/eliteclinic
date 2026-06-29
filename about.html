@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Elite Multi Speciality Clinic</title>
+    <meta name="description" content="Learn more about Dr. Salman and the Elite Multi Speciality Clinic in Carmelaram. Read our mission, vision, and clinic history.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar & Navbar (Same as index) -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-info">
+                <span><i class="fa-solid fa-clock"></i> <span data-config="timings"></span></span>
+                <span><i class="fa-solid fa-phone"></i> <a href="#" class="phone-link" data-config="phone"></a></span>
+                <span><i class="fa-solid fa-location-dot"></i> Hadosiddhapura, Carmelaram</span>
+            </div>
+            <div class="top-bar-social">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-user-doctor"></i>
+                <span data-config="clinicName"></span>
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="offers.html">Offers</a>
+                <a href="blogs.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Committed to providing comprehensive healthcare to the Carmelaram community.</p>
+        </div>
+    </section>
+
+    <!-- Doctor Profile -->
+    <section>
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1000" alt="Doctor Consultation">
+            </div>
+            <div class="about-text">
+                <div class="section-title" style="text-align: left;">
+                    <span>The Expert Behind The Care</span>
+                    <h2><span data-config="doctorName"></span></h2>
+                </div>
+                <h4 style="color: var(--secondary-blue);"><span data-config="doctorQualification"></span> | <span data-config="doctorSpecialization"></span></h4>
+                <p>With over <span data-config="experience"></span> of rich clinical experience, Dr. Salman leads the Elite Multi Speciality Clinic with a vision to make premium healthcare accessible and hassle-free. He specializes in early diagnosis, chronic disease management, and preventive healthcare.</p>
+                
+                <h4 style="margin-top: 2rem;">Certifications & Expertise</h4>
+                <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <li><i class="fa-solid fa-award"></i> Advanced Life Support (ALS)</li>
+                    <li><i class="fa-solid fa-award"></i> Internal Medicine Certified</li>
+                    <li><i class="fa-solid fa-award"></i> Diabetes Management Specialist</li>
+                    <li><i class="fa-solid fa-award"></i> Pediatric Care Certified</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinic Story, Mission, Vision -->
+    <section class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <span>Our Foundation</span>
+                <h2>The Elite Clinic Story</h2>
+            </div>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-light);">
+                Founded to bridge the gap between high-end corporate hospitals and local primary care centers, Elite Medical and General Store & Elite Multi Speciality Clinic was established in Hadosiddhapura, Carmelaram. We recognized the need for a unified healthcare hub where patients could consult top doctors and immediately fulfill their medical prescriptions without waiting.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="feature-item" style="text-align: left;">
+                    <i class="fa-solid fa-bullseye feature-icon"></i>
+                    <h3>Our Mission</h3>
+                    <p>To deliver evidence-based, compassionate primary care while ensuring absolute convenience through our integrated pharmacy and general store, reducing the friction in healthcare access.</p>
+                </div>
+                <div class="feature-item" style="text-align: left;">
+                    <i class="fa-solid fa-eye feature-icon"></i>
+                    <h3>Our Vision</h3>
+                    <p>To become the most trusted and sought-after neighborhood healthcare destination in the Carmelaram and Sarjapur micro-market, synonymous with quality, affordability, and zero wait times.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinic Gallery -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <span>Take A Tour</span>
+                <h2>Clinic Gallery</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600" style="border-radius: 0.5rem; height: 200px; object-fit: cover; width: 100%;" alt="Clinic Interior">
+                <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&q=80&w=600" style="border-radius: 0.5rem; height: 200px; object-fit: cover; width: 100%;" alt="Pharmacy">
+                <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=600" style="border-radius: 0.5rem; height: 200px; object-fit: cover; width: 100%;" alt="Consultation Room">
+                <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=600" style="border-radius: 0.5rem; height: 200px; object-fit: cover; width: 100%;" alt="Waiting Area">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <span data-config="clinicName"></span>
+                    </a>
+                    <p data-config="tagline" style="margin-bottom: 1.5rem;"></p>
+                    <p><i class="fa-solid fa-location-dot" style="color: var(--accent-green); margin-right: 0.5rem;"></i> <span data-config="address"></span></p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="phone-link"><i class="fa-solid fa-phone" style="color: var(--accent-green); margin-right: 0.5rem;"></i> <span data-config="phone"></span></a></li>
+                        <li><a href="#" class="whatsapp-link"><i class="fa-brands fa-whatsapp" style="color: var(--accent-green); margin-right: 0.5rem;"></i> <span data-config="whatsappDisplay"></span></a></li>
+                        <li><a href="#" class="email-link"><i class="fa-solid fa-envelope" style="color: var(--accent-green); margin-right: 0.5rem;"></i> <span data-config="email"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> <span data-config="clinicName"></span>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="#" class="floating-whatsapp whatsapp-link" aria-label="Chat on WhatsApp" data-no-text="true">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
